@@ -1,0 +1,151 @@
+:root{
+  --main-color:#580EF6;
+  --balck-color:#1A1C22;
+  --light-grey: #3d3a5080;
+  --white-color: #F7F7F7;
+  --shadow-color:#f7f7f779;
+  --glass-color:#83f54e;
+}
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body{
+  background: url("../img/fon.jpg") no-repeat border-box;
+  background-size: 100vw;
+  color: var(--white-color);
+  font-family: 'Montserrat', sans-serif;
+}
+.body { 
+  max-width: 80%;
+  margin: auto;
+}
+/*START шапка сайта */
+#header{
+  margin: 10px 10px 0 0; 
+  background: linear-gradient(145deg, #33288a 0%, #393bd3 100%);
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px var(--light-grey);
+}
+.header-logo{
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}
+.menu{
+  display: flex;
+  width: 100%;
+}
+#nav-bar{
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+#nav-bar li{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.nav-link{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link:hover{
+background-color: #4205c7;
+border-radius: 10px;
+}
+ul {
+  list-style-type: none;
+}
+a{
+  color: var(--white-color);
+  text-decoration: none;
+}
+#header label, #toggler{
+  display: none;
+}
+/*END шапка сайта */
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 5vh;
+}
+/* START фотка коктейля */
+.picture{
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid var(--shadow-color);
+  backdrop-filter: blur(10px);
+}
+.picture img{
+  width:100%;
+  max-width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* END фотка коктейля */
+
+/* START описание и рецепт */
+.description{
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  align-items: center;
+  max-width: 550px;
+}
+.cocktail-contents, .recipe, .look-alike{
+  padding: 1vh;
+  border: var(--shadow-color) 2px solid;
+  border-radius: 10px;
+  background: var(--light-grey);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: fit-content;
+}
+.ingredient:not(:last-child):after{
+  display: block;
+  text-align:center;
+  font-family: "FontAwesome";
+  content: "\2b";
+  /* background-color: red; */
+}
+.step:not(:last-child):after{
+  display: block;
+  text-align:center;
+  font-family: "FontAwesome";
+  content: "\f078";
+}
+/* END описание и рецепт */
+
+@media screen and (max-width:1050px){
+  #header{
+    margin: 10px 20px 0 0;
+  }
+  .catalog-item{
+    margin-bottom: 10%;
+  }
+}
+
